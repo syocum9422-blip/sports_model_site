@@ -3,9 +3,9 @@ from pathlib import Path
 
 import pandas as pd
 
-PROJECTIONS_FILE = Path("/Users/steveyocum/Desktop/mlb_model_v2_working/mlb_model/mlb/outputs/hitter_predictions_today.csv")
+PROJECTIONS_FILE = Path("data/mlb/hitter_predictions_today.csv")
 LINES_FILE = Path("data/mlb/lines_today.csv")
-LINEUPS_FILE = Path("/Users/steveyocum/Desktop/mlb_model_v2_working/mlb_model/lineups_with_ids.csv")
+LINEUPS_FILE = Path("data/mlb/lineups_with_ids.csv")
 OUTPUT_FILE = Path("data/mlb/official_plays.csv")
 
 MIN_CONFIDENCE = 5
@@ -32,29 +32,24 @@ def build_official_plays():
     lines_df = pd.read_csv(LINES_FILE)
     lineup_df = pd.read_csv(LINEUPS_FILE)
 
-    # hits only
     lines_df = lines_df[
         (lines_df["STAT"] == "HIT") &
         (lines_df["PLAYER_TYPE"] == "HITTER")
     ].copy()
 
-    # clean keys
     lines_df["PLAYER_KEY"] = lines_df["PLAYER_NAME"].apply(clean_name)
     lineup_df["PLAYER_KEY"] = lineup_df["hitter_name"].apply(clean_name)
 
-    # only keep lineup rows that have valid hitter IDs
     lineup_df = lineup_df.dropna(subset=["hitter_id"]).copy()
     lineup_df["hitter_id"] = pd.to_numeric(lineup_df["hitter_id"], errors="coerce")
     proj_df["hitter_id"] = pd.to_numeric(proj_df["hitter_id"], errors="coerce")
 
-    # bridge lines -> lineup ids by cleaned player name
     bridged_df = lines_df.merge(
         lineup_df[["PLAYER_KEY", "team", "hitter_name", "hitter_id"]],
         on="PLAYER_KEY",
         how="inner"
     )
 
-    # join to projections by real hitter id
     merged = bridged_df.merge(
         proj_df,
         on="hitter_id",
@@ -68,7 +63,6 @@ def build_official_plays():
         projection = convert_hit_probability_to_projection(row["hit_prob"])
         line = float(row["LINE"])
 
-        # hard stop for broken hit props
         if line > 3:
             continue
 
@@ -98,7 +92,7 @@ def build_official_plays():
     plays_df = pd.DataFrame(plays)
 
     if plays_df.empty:
-        raise ValueError("No HIT plays were created. Check line fetch output, lineup bridge, or hit-line filtering.")
+        raise ValueError("No HIT plays were created.")
 
     plays_df = plays_df[
         (plays_df["CONFIDENCE"] >= MIN_CONFIDENCE) &

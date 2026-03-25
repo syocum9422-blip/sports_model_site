@@ -1,9 +1,9 @@
 from pathlib import Path
 import pandas as pd
 
-PROJECTIONS_FILE = Path("/Users/steveyocum/Desktop/mlb_model_v2_working/mlb_model/mlb/outputs/pitcher_predictions_today.csv")
-LINES_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/lines_today.csv")
-OUTPUT_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/official_pitcher_plays.csv")
+PROJECTIONS_FILE = Path("data/mlb/pitcher_predictions_today.csv")
+LINES_FILE = Path("data/mlb/lines_today.csv")
+OUTPUT_FILE = Path("data/mlb/official_pitcher_plays.csv")
 
 MIN_CONFIDENCE = 5
 MAX_PLAYS = 15

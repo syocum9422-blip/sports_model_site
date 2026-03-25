@@ -2,9 +2,9 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 
-HITTERS_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/official_plays.csv")
-PITCHERS_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/official_pitcher_plays.csv")
-TRACKED_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/tracked_plays.csv")
+HITTERS_FILE = Path("data/mlb/official_plays.csv")
+PITCHERS_FILE = Path("data/mlb/official_pitcher_plays.csv")
+TRACKED_FILE = Path("data/mlb/tracked_plays.csv")
 
 def load_csv_if_exists(path):
     if path.exists():
