@@ -4,8 +4,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-OUTPUT_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/lines_today.csv")
-DEBUG_FILE = Path("/Users/steveyocum/Desktop/sports_model_site/data/mlb/lines_debug.csv")
+OUTPUT_FILE = Path("data/mlb/lines_today.csv")
+DEBUG_FILE = Path("data/mlb/lines_debug.csv")
 
 API_URL = "https://api.underdogfantasy.com/beta/v5/over_under_lines"
 
@@ -30,6 +30,23 @@ def map_stat(raw_stat):
         return "K"
 
     return None
+
+def is_valid_line(stat, line_value):
+    if line_value is None:
+        return False
+
+    try:
+        line_value = float(line_value)
+    except Exception:
+        return False
+
+    if stat == "HIT":
+        return 0 <= line_value <= 3.5
+
+    if stat == "K":
+        return 0 <= line_value <= 15.5
+
+    return False
 
 def main():
     response = requests.get(API_URL, headers=HEADERS, timeout=30)
@@ -98,9 +115,9 @@ def main():
 
         mapped_stat = map_stat(raw_stat)
 
-        line_value = row.get("stat_value")
+        raw_line_value = row.get("stat_value")
         try:
-            line_value = float(line_value) if line_value is not None else None
+            line_value = float(raw_line_value) if raw_line_value is not None else None
         except Exception:
             line_value = None
 
@@ -114,9 +131,6 @@ def main():
         position_name = str(player.get("position_name", "") or "")
         position_display_name = str(player.get("position_display_name", "") or "")
 
-        if line_value is None and mapped_stat == "HIT":
-            line_value = 0.5
-
         debug_rows.append(
             {
                 "PLAYER_NAME": player_name,
@@ -125,11 +139,15 @@ def main():
                 "POSITION_DISPLAY_NAME": position_display_name,
                 "RAW_STAT": raw_stat,
                 "MAPPED_STAT": mapped_stat,
+                "RAW_LINE": raw_line_value,
                 "LINE": line_value,
             }
         )
 
-        if mapped_stat is None or line_value is None:
+        if mapped_stat is None:
+            continue
+
+        if not is_valid_line(mapped_stat, line_value):
             continue
 
         if mapped_stat == "HIT":
@@ -142,6 +160,7 @@ def main():
                     "PLAYER_TYPE": "HITTER",
                 }
             )
+
         elif mapped_stat == "K":
             rows.append(
                 {
@@ -166,3 +185,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

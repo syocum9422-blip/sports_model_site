@@ -2,31 +2,30 @@ name: MLB Model Automation
 
 on:
   schedule:
-    - cron: '0 14 * * *'
-    - cron: '0 16 * * *'
-    - cron: '0 18 * * *'
-    - cron: '0 22 * * *'
-    - cron: '0 4 * * *'
+    - cron: '0 14 * * *'   # 10 AM EST
+    - cron: '0 16 * * *'   # 12 PM EST
+    - cron: '0 18 * * *'   # 2 PM EST
+    - cron: '0 22 * * *'   # 6 PM EST
+    - cron: '0 4 * * *'    # 12 AM EST (grading)
+
   workflow_dispatch:
 
 jobs:
   run-model:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-          cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install pandas requests numpy
 
       - name: Run model pipeline
         run: |
@@ -35,14 +34,14 @@ jobs:
           python build_mlb_pitcher_plays.py
           python track_mlb_plays.py
 
-      - name: Run grading at midnight only
+      - name: Run grading (midnight only)
         run: |
           HOUR=$(date -u +%H)
           if [ "$HOUR" = "04" ]; then
             python grade_mlb_plays.py
           fi
 
-      - name: Commit updated CSVs
+      - name: Commit updated files
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
