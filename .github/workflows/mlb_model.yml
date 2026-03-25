@@ -1,0 +1,50 @@
+name: MLB Model Automation
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 10 AM EST
+    - cron: '0 16 * * *'   # 12 PM EST
+    - cron: '0 18 * * *'   # 2 PM EST
+    - cron: '0 22 * * *'   # 6 PM EST
+    - cron: '0 4 * * *'    # 12 AM EST (grading)
+
+  workflow_dispatch:
+
+jobs:
+  run-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas requests numpy
+
+      - name: Run model pipeline
+        run: |
+          python fetch_mlb_lines.py
+          python build_mlb_official_plays.py
+          python build_mlb_pitcher_plays.py
+          python track_mlb_plays.py
+
+      - name: Run grading (midnight only)
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "04" ]; then
+            python grade_mlb_plays.py
+          fi
+
+      - name: Commit updated files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add data/mlb/*.csv
+          git commit -m "Auto update model data" || echo "No changes"
+          git push
