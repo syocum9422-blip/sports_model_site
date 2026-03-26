@@ -7,6 +7,7 @@ PROJECTIONS_FILE = Path("data/mlb/hitter_predictions_today.csv")
 LINES_FILE = Path("data/mlb/lines_today.csv")
 LINEUPS_FILE = Path("data/mlb/lineups_with_ids.csv")
 OUTPUT_FILE = Path("data/mlb/official_plays.csv")
+FULL_OUTPUT_FILE = Path("data/mlb/full_hitter_projections.csv")
 
 MIN_CONFIDENCE = 5
 MAX_PLAYS = 15
@@ -57,7 +58,8 @@ def build_official_plays():
         suffixes=("", "_model")
     )
 
-    plays = []
+    full_rows = []
+    play_rows = []
 
     for _, row in merged.iterrows():
         projection = convert_hit_probability_to_projection(row["hit_prob"])
@@ -77,7 +79,7 @@ def build_official_plays():
 
         confidence = round(abs(edge) * 100)
 
-        plays.append({
+        full_row = {
             "PLAYER_NAME": row["PLAYER_NAME"],
             "TEAM": row["team"],
             "HITTER_ID": int(row["hitter_id"]),
@@ -87,17 +89,28 @@ def build_official_plays():
             "EDGE": edge,
             "CONFIDENCE": confidence,
             "PICK": pick,
-        })
+        }
 
-    plays_df = pd.DataFrame(plays)
+        full_rows.append(full_row)
+
+        if confidence >= MIN_CONFIDENCE and pick != "PUSH":
+            play_rows.append(full_row)
+
+    full_df = pd.DataFrame(full_rows)
+    plays_df = pd.DataFrame(play_rows)
+
+    if full_df.empty:
+        raise ValueError("No hitter projections were created.")
+
+    FULL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    full_df = full_df.sort_values(
+        by=["CONFIDENCE", "EDGE"],
+        ascending=[False, False]
+    ).reset_index(drop=True)
+    full_df.to_csv(FULL_OUTPUT_FILE, index=False)
 
     if plays_df.empty:
         raise ValueError("No HIT plays were created.")
-
-    plays_df = plays_df[
-        (plays_df["CONFIDENCE"] >= MIN_CONFIDENCE) &
-        (plays_df["PICK"] != "PUSH")
-    ]
 
     plays_df = plays_df.sort_values(
         by=["CONFIDENCE", "EDGE"],
@@ -107,6 +120,7 @@ def build_official_plays():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     plays_df.to_csv(OUTPUT_FILE, index=False)
 
+    print(f"Saved full hitter projections to: {FULL_OUTPUT_FILE}")
     print(f"Saved official HIT plays to: {OUTPUT_FILE}")
     print(plays_df.to_string(index=False))
 
