@@ -9,6 +9,20 @@ FULL_OUTPUT_FILE = Path("data/mlb/full_pitcher_projections.csv")
 MIN_CONFIDENCE = 5
 MAX_PLAYS = 15
 
+
+def empty_pitcher_df():
+    return pd.DataFrame(columns=[
+        "PLAYER_NAME",
+        "STAT",
+        "LINE",
+        "PROJECTION",
+        "EDGE",
+        "CONFIDENCE",
+        "PICK",
+        "OPPONENT",
+    ])
+
+
 def build_pitcher_plays():
     if not PROJECTIONS_FILE.exists():
         raise FileNotFoundError(f"Missing projections file: {PROJECTIONS_FILE}")
@@ -22,6 +36,17 @@ def build_pitcher_plays():
         (lines_df["STAT"] == "K") &
         (lines_df["PLAYER_TYPE"] == "PITCHER")
     ].copy()
+
+    if lines_df.empty:
+        OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+        FULL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+        empty_df = empty_pitcher_df()
+        empty_df.to_csv(OUTPUT_FILE, index=False)
+        empty_df.to_csv(FULL_OUTPUT_FILE, index=False)
+
+        print("No pitcher strikeout lines found for this run.")
+        return
 
     merged = lines_df.merge(
         proj_df,
@@ -47,7 +72,7 @@ def build_pitcher_plays():
 
         confidence = round(abs(edge) * 10)
 
-        full_row = {
+        out_row = {
             "PLAYER_NAME": row["PLAYER_NAME"],
             "STAT": "K",
             "LINE": line,
@@ -55,41 +80,54 @@ def build_pitcher_plays():
             "EDGE": edge,
             "CONFIDENCE": confidence,
             "PICK": pick,
-            "OPPONENT": row["opponent"],
+            "OPPONENT": row.get("opponent", ""),
         }
 
-        full_rows.append(full_row)
+        full_rows.append(out_row)
 
         if confidence >= MIN_CONFIDENCE and pick != "PUSH":
-            play_rows.append(full_row)
+            play_rows.append(out_row)
 
     full_df = pd.DataFrame(full_rows)
     plays_df = pd.DataFrame(play_rows)
 
-    if full_df.empty:
-        raise ValueError("No pitcher projections were created.")
-
     FULL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    full_df = full_df.sort_values(
-        by=["CONFIDENCE", "EDGE"],
-        ascending=[False, False]
-    ).reset_index(drop=True)
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    if full_df.empty:
+        full_df = empty_pitcher_df()
+    else:
+        full_df = full_df.sort_values(
+            by=["CONFIDENCE", "EDGE"],
+            ascending=[False, False]
+        ).reset_index(drop=True)
+
     full_df.to_csv(FULL_OUTPUT_FILE, index=False)
 
     if plays_df.empty:
-        raise ValueError("No pitcher strikeout plays were created.")
+        plays_df = empty_pitcher_df()
+    else:
+        plays_df = plays_df.sort_values(
+            by=["CONFIDENCE", "EDGE"],
+            ascending=[False, False]
+        ).head(MAX_PLAYS).reset_index(drop=True)
 
-    plays_df = plays_df.sort_values(
-        by=["CONFIDENCE", "EDGE"],
-        ascending=[False, False]
-    ).head(MAX_PLAYS).reset_index(drop=True)
-
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     plays_df.to_csv(OUTPUT_FILE, index=False)
 
     print(f"Saved full pitcher projections to: {FULL_OUTPUT_FILE}")
     print(f"Saved pitcher plays to: {OUTPUT_FILE}")
-    print(plays_df.to_string(index=False))
+
+    if full_df.empty:
+        print("No pitcher projections were created.")
+    else:
+        print(full_df.head(20).to_string(index=False))
+
+    if plays_df.empty:
+        print("No official pitcher plays were created for this run.")
+    else:
+        print("\nOfficial pitcher plays:")
+        print(plays_df.to_string(index=False))
+
 
 if __name__ == "__main__":
     build_pitcher_plays()
