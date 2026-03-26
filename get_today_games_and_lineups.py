@@ -12,7 +12,7 @@ def get_today_schedule():
     today = datetime.today().strftime("%Y-%m-%d")
     url = (
         f"https://statsapi.mlb.com/api/v1/schedule"
-        f"?sportId=1&date={today}&hydrate=team,linescore,probablePitcher"
+        f"?sportId=1&date={today}&hydrate=team,probablePitcher"
     )
     data = fetch_json(url)
     dates = data.get("dates", [])
@@ -21,7 +21,7 @@ def get_today_schedule():
     return dates[0].get("games", [])
 
 
-def get_lineup(game_pk):
+def get_confirmed_lineup(game_pk):
     url = f"https://statsapi.mlb.com/api/v1/game/{game_pk}/boxscore"
     data = fetch_json(url)
 
@@ -30,66 +30,27 @@ def get_lineup(game_pk):
     for side in ["home", "away"]:
         players = data.get("teams", {}).get(side, {}).get("players", {})
 
-        confirmed = [
-            {
-                "player_id": p["person"]["id"],
-                "name": p["person"]["fullName"],
-                "order": p["battingOrder"],
-                "team": data["teams"][side]["team"]["name"],
-            }
-            for p in players.values()
-            if p.get("battingOrder")
-        ]
+        confirmed = []
+        for p in players.values():
+            batting_order = p.get("battingOrder")
+            if not batting_order:
+                continue
 
-        if confirmed:
-            confirmed = sorted(confirmed, key=lambda x: int(x["order"]))
-            lineups[side] = confirmed
-        else:
-            projected = [
-                {
-                    "player_id": p["person"]["id"],
-                    "name": p["person"]["fullName"],
-                    "order": None,
-                    "team": data["teams"][side]["team"]["name"],
-                }
-                for p in players.values()
-            ]
-            lineups[side] = projected
+            person = p.get("person", {})
+            if not person.get("id") or not person.get("fullName"):
+                continue
+
+            confirmed.append({
+                "player_id": person["id"],
+                "name": person["fullName"],
+                "order": batting_order,
+                "team": data["teams"][side]["team"]["name"],
+            })
+
+        confirmed = sorted(confirmed, key=lambda x: int(x["order"]))
+        lineups[side] = confirmed
 
     return lineups
-
-
-def get_park_factor(team_id):
-    try:
-        url = f"https://statsapi.mlb.com/api/v1/teams/{team_id}"
-        data = fetch_json(url)
-        venue = data["teams"][0]["venue"]["id"]
-
-        url = f"https://statsapi.mlb.com/api/v1/venues/{venue}"
-        data = fetch_json(url)
-
-        return data.get("venues", [{}])[0].get("fieldInfo", {}).get("capacity", 1)
-    except Exception:
-        return 1
-
-
-def get_weather(game_pk):
-    try:
-        url = f"https://statsapi.mlb.com/api/v1.1/game/{game_pk}/feed/live"
-        data = fetch_json(url)
-
-        weather = data.get("gameData", {}).get("weather", {})
-        return {
-            "temp": weather.get("temp"),
-            "wind": weather.get("wind"),
-            "condition": weather.get("condition"),
-        }
-    except Exception:
-        return {
-            "temp": None,
-            "wind": None,
-            "condition": None,
-        }
 
 
 def get_today_games_and_lineups():
@@ -108,26 +69,22 @@ def get_today_games_and_lineups():
         if not home_pitcher or not away_pitcher:
             continue
 
-        lineups = get_lineup(game_pk)
-        weather = get_weather(game_pk)
-        park_factor = get_park_factor(home_team["id"])
+        lineups = get_confirmed_lineup(game_pk)
 
-        context = {
-            "park_factor": park_factor,
-            "weather_temp": weather["temp"],
-            "weather_wind": weather["wind"],
-            "weather_condition": weather["condition"],
-        }
-
+        # only use confirmed lineup hitters
         for side, pitcher, home_flag in [
             ("away", home_pitcher, 0),
             ("home", away_pitcher, 1),
         ]:
+            confirmed_hitters = lineups.get(side, [])
+            if not confirmed_hitters:
+                continue
+
             pitcher_id = pitcher["id"]
             pitcher_name = pitcher["fullName"]
             opponent = home_team["name"] if side == "away" else away_team["name"]
 
-            for hitter in lineups[side]:
+            for hitter in confirmed_hitters:
                 output.append({
                     "gamePk": game_pk,
                     "hitter_id": hitter["player_id"],
@@ -138,7 +95,11 @@ def get_today_games_and_lineups():
                     "pitcher_name": pitcher_name,
                     "opponent": opponent,
                     "home_flag": home_flag,
-                    "context": context,
                 })
 
     return output
+
+
+if __name__ == "__main__":
+    rows = get_today_games_and_lineups()
+    print(rows[:20])
