@@ -43,7 +43,6 @@ def get_projected_or_confirmed_hitters(game_pk):
             if not pid or not pname:
                 continue
 
-            # confirmed lineup
             if p.get("battingOrder"):
                 confirmed.append({
                     "player_id": pid,
@@ -53,7 +52,6 @@ def get_projected_or_confirmed_hitters(game_pk):
                 })
                 continue
 
-            # projected fallback: only non-pitchers
             if position_type != "Pitcher":
                 projected.append({
                     "player_id": pid,
@@ -89,26 +87,33 @@ def get_today_games_and_lineups():
 
         lineups = get_projected_or_confirmed_hitters(game_pk)
 
-        for side, pitcher, home_flag in [
-            ("away", home_pitcher, 0),
-            ("home", away_pitcher, 1),
-        ]:
-            pitcher_id = pitcher["id"]
-            pitcher_name = pitcher["fullName"]
-            opponent = home_team["name"] if side == "away" else away_team["name"]
+        # away hitters face HOME pitcher
+        for hitter in lineups.get("away", []):
+            output.append({
+                "gamePk": game_pk,
+                "team": hitter["team"],
+                "hitter_name": hitter["name"],
+                "hitter_id": hitter["player_id"],
+                "pitcher_name": home_pitcher["fullName"],
+                "pitcher_id": home_pitcher["id"],
+                "opponent": away_team["name"],   # pitcher's opponent = batting team
+                "home_flag": 1,                  # home pitcher
+                "order": hitter["order"],
+            })
 
-            for hitter in lineups.get(side, []):
-                output.append({
-                    "gamePk": game_pk,
-                    "team": hitter["team"],
-                    "hitter_name": hitter["name"],
-                    "hitter_id": hitter["player_id"],
-                    "pitcher_name": pitcher_name,
-                    "pitcher_id": pitcher_id,
-                    "opponent": opponent,
-                    "home_flag": home_flag,
-                    "order": hitter["order"],
-                })
+        # home hitters face AWAY pitcher
+        for hitter in lineups.get("home", []):
+            output.append({
+                "gamePk": game_pk,
+                "team": hitter["team"],
+                "hitter_name": hitter["name"],
+                "hitter_id": hitter["player_id"],
+                "pitcher_name": away_pitcher["fullName"],
+                "pitcher_id": away_pitcher["id"],
+                "opponent": home_team["name"],   # pitcher's opponent = batting team
+                "home_flag": 0,                  # away pitcher
+                "order": hitter["order"],
+            })
 
     print(f"Collected {len(output)} matchup rows for today.")
     return output
