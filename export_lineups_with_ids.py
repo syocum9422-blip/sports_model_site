@@ -8,15 +8,22 @@ OUTPUT_FILE = Path("data/mlb/lineups_with_ids.csv")
 def export_lineups():
     rows = get_today_games_and_lineups()
 
+    needed = ["team", "hitter_name", "hitter_id"]
+
     if not rows:
-        raise ValueError("No lineup rows returned for today.")
+        OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame(columns=needed).to_csv(OUTPUT_FILE, index=False)
+        print("No lineup rows returned for today. Saved empty lineup bridge file.")
+        return
 
     df = pd.DataFrame(rows)
 
-    needed = ["team", "hitter_name", "hitter_id"]
     for col in needed:
         if col not in df.columns:
-            raise ValueError(f"Missing required lineup column: {col}")
+            OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+            pd.DataFrame(columns=needed).to_csv(OUTPUT_FILE, index=False)
+            print(f"Missing required lineup column: {col}. Saved empty lineup bridge file.")
+            return
 
     bridge_df = df[needed].copy()
     bridge_df = bridge_df.drop_duplicates().sort_values(
