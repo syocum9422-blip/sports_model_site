@@ -1,84 +1,119 @@
 import requests
 from datetime import datetime
 
-MLB_SCHEDULE_URL = "https://statsapi.mlb.com/api/v1/schedule?sportId=1"
+
+def fetch_json(url):
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    return r.json()
 
 
-def get_today_games():
+def get_today_schedule():
     today = datetime.today().strftime("%Y-%m-%d")
-    url = f"{MLB_SCHEDULE_URL}&date={today}"
-
-    r = requests.get(url)
-    data = r.json()
-
-    games = []
-
-    for date in data.get("dates", []):
-        for game in date.get("games", []):
-            games.append({
-                "home_team": game["teams"]["home"]["team"]["name"],
-                "away_team": game["teams"]["away"]["team"]["name"],
-                "gamePk": game["gamePk"]
-            })
-
-    return games
+    url = (
+        f"https://statsapi.mlb.com/api/v1/schedule"
+        f"?sportId=1&date={today}&hydrate=team,probablePitcher"
+    )
+    data = fetch_json(url)
+    dates = data.get("dates", [])
+    if not dates:
+        return []
+    return dates[0].get("games", [])
 
 
-def get_lineup_or_projection(gamePk):
-    url = f"https://statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live"
-    r = requests.get(url)
-    data = r.json()
+def get_projected_or_confirmed_hitters(game_pk):
+    url = f"https://statsapi.mlb.com/api/v1.1/game/{game_pk}/feed/live"
+    data = fetch_json(url)
 
-    lineups = []
+    result = {"home": [], "away": []}
 
     for side in ["home", "away"]:
-        team = data.get("gameData", {}).get("teams", {}).get(side, {}).get("name", "")
-
-        # 1️⃣ TRY CONFIRMED LINEUP
+        team_name = data.get("gameData", {}).get("teams", {}).get(side, {}).get("name", "")
         players = data.get("liveData", {}).get("boxscore", {}).get("teams", {}).get(side, {}).get("players", {})
 
         confirmed = []
+        projected = []
+
         for p in players.values():
+            person = p.get("person", {})
+            pid = person.get("id")
+            pname = person.get("fullName")
+            position_type = p.get("position", {}).get("type", "")
+
+            if not pid or not pname:
+                continue
+
+            # confirmed lineup
             if p.get("battingOrder"):
                 confirmed.append({
-                    "team": team,
-                    "hitter_name": p["person"]["fullName"],
-                    "hitter_id": p["person"]["id"]
+                    "player_id": pid,
+                    "name": pname,
+                    "team": team_name,
+                    "order": p.get("battingOrder"),
+                })
+                continue
+
+            # projected fallback: only non-pitchers
+            if position_type != "Pitcher":
+                projected.append({
+                    "player_id": pid,
+                    "name": pname,
+                    "team": team_name,
+                    "order": None,
                 })
 
         if confirmed:
-            lineups.extend(confirmed)
-            continue
+            confirmed = sorted(confirmed, key=lambda x: int(x["order"]))
+            result[side] = confirmed
+        else:
+            result[side] = projected
 
-        # 2️⃣ FALLBACK → PROBABLE LINEUP (projected-ish)
-        probable = data.get("gameData", {}).get("probablePitchers", {})
-        roster = data.get("gameData", {}).get("players", {})
-
-        for p in roster.values():
-            if p.get("primaryPosition", {}).get("type") == "infielder" or \
-               p.get("primaryPosition", {}).get("type") == "outfielder":
-                lineups.append({
-                    "team": team,
-                    "hitter_name": p.get("fullName"),
-                    "hitter_id": p.get("id")
-                })
-
-    return lineups
+    return result
 
 
 def get_today_games_and_lineups():
-    games = get_today_games()
-
-    all_rows = []
+    games = get_today_schedule()
+    output = []
 
     for g in games:
-        lineup = get_lineup_or_projection(g["gamePk"])
-        all_rows.extend(lineup)
+        game_pk = g["gamePk"]
 
-    print(f"Collected {len(all_rows)} lineup rows (confirmed + projected fallback)")
-    return all_rows
+        home_team = g["teams"]["home"]["team"]
+        away_team = g["teams"]["away"]["team"]
+
+        home_pitcher = g["teams"]["home"].get("probablePitcher")
+        away_pitcher = g["teams"]["away"].get("probablePitcher")
+
+        if not home_pitcher or not away_pitcher:
+            continue
+
+        lineups = get_projected_or_confirmed_hitters(game_pk)
+
+        for side, pitcher, home_flag in [
+            ("away", home_pitcher, 0),
+            ("home", away_pitcher, 1),
+        ]:
+            pitcher_id = pitcher["id"]
+            pitcher_name = pitcher["fullName"]
+            opponent = home_team["name"] if side == "away" else away_team["name"]
+
+            for hitter in lineups.get(side, []):
+                output.append({
+                    "gamePk": game_pk,
+                    "team": hitter["team"],
+                    "hitter_name": hitter["name"],
+                    "hitter_id": hitter["player_id"],
+                    "pitcher_name": pitcher_name,
+                    "pitcher_id": pitcher_id,
+                    "opponent": opponent,
+                    "home_flag": home_flag,
+                    "order": hitter["order"],
+                })
+
+    print(f"Collected {len(output)} matchup rows for today.")
+    return output
 
 
 if __name__ == "__main__":
     rows = get_today_games_and_lineups()
-    print(rows[:10])
+    print(rows[:20])
