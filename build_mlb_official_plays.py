@@ -12,14 +12,31 @@ FULL_OUTPUT_FILE = Path("data/mlb/full_hitter_projections.csv")
 MIN_CONFIDENCE = 5
 MAX_PLAYS = 15
 
+
 def clean_name(name):
     name = str(name).lower().strip()
     name = re.sub(r"[^a-z0-9\s]", "", name)
     name = re.sub(r"\s+", " ", name)
     return name
 
+
 def convert_hit_probability_to_projection(prob_value):
     return round(float(prob_value) / 100.0, 2)
+
+
+def empty_projection_df():
+    return pd.DataFrame(columns=[
+        "PLAYER_NAME",
+        "TEAM",
+        "HITTER_ID",
+        "STAT",
+        "LINE",
+        "PROJECTION",
+        "EDGE",
+        "CONFIDENCE",
+        "PICK",
+    ])
+
 
 def build_official_plays():
     if not PROJECTIONS_FILE.exists():
@@ -79,7 +96,7 @@ def build_official_plays():
 
         confidence = round(abs(edge) * 100)
 
-        full_row = {
+        out_row = {
             "PLAYER_NAME": row["PLAYER_NAME"],
             "TEAM": row["team"],
             "HITTER_ID": int(row["hitter_id"]),
@@ -91,38 +108,51 @@ def build_official_plays():
             "PICK": pick,
         }
 
-        full_rows.append(full_row)
+        full_rows.append(out_row)
 
         if confidence >= MIN_CONFIDENCE and pick != "PUSH":
-            play_rows.append(full_row)
+            play_rows.append(out_row)
 
     full_df = pd.DataFrame(full_rows)
     plays_df = pd.DataFrame(play_rows)
 
-    if full_df.empty:
-        raise ValueError("No hitter projections were created.")
-
     FULL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    if full_df.empty:
+        full_df = empty_projection_df()
+
     full_df = full_df.sort_values(
         by=["CONFIDENCE", "EDGE"],
         ascending=[False, False]
     ).reset_index(drop=True)
+
     full_df.to_csv(FULL_OUTPUT_FILE, index=False)
 
     if plays_df.empty:
-        raise ValueError("No HIT plays were created.")
+        plays_df = empty_projection_df()
+    else:
+        plays_df = plays_df.sort_values(
+            by=["CONFIDENCE", "EDGE"],
+            ascending=[False, False]
+        ).head(MAX_PLAYS).reset_index(drop=True)
 
-    plays_df = plays_df.sort_values(
-        by=["CONFIDENCE", "EDGE"],
-        ascending=[False, False]
-    ).head(MAX_PLAYS).reset_index(drop=True)
-
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     plays_df.to_csv(OUTPUT_FILE, index=False)
 
     print(f"Saved full hitter projections to: {FULL_OUTPUT_FILE}")
     print(f"Saved official HIT plays to: {OUTPUT_FILE}")
-    print(plays_df.to_string(index=False))
+
+    if full_df.empty:
+        print("No hitter projections were created.")
+    else:
+        print(full_df.head(20).to_string(index=False))
+
+    if plays_df.empty:
+        print("No official hitter plays were created for this run.")
+    else:
+        print("\nOfficial hitter plays:")
+        print(plays_df.to_string(index=False))
+
 
 if __name__ == "__main__":
     build_official_plays()
