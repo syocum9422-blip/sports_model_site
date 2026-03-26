@@ -29,17 +29,32 @@ jobs:
         run: |
           pip install pandas requests numpy joblib pybaseball scikit-learn
 
-      - name: Run full MLB pipeline
-        run: |
-          python fetch_mlb_lines.py
-          python export_lineups_with_ids.py
-          python predict_hitter.py
-          python predict_pitchers.py
-          python build_full_hitter_projections.py
-          python build_full_pitcher_projections.py
-          python build_mlb_official_plays.py
-          python build_mlb_pitcher_plays.py
-          python track_mlb_plays.py
+      - name: Fetch MLB lines
+        run: python fetch_mlb_lines.py
+
+      - name: Export lineups with IDs
+        run: python export_lineups_with_ids.py
+
+      - name: Predict hitters
+        run: python predict_hitter.py
+
+      - name: Predict pitchers
+        run: python predict_pitchers.py
+
+      - name: Build full hitter projections
+        run: python build_full_hitter_projections.py
+
+      - name: Build full pitcher projections
+        run: python build_full_pitcher_projections.py
+
+      - name: Build official hitter plays
+        run: python build_mlb_official_plays.py
+
+      - name: Build official pitcher plays
+        run: python build_mlb_pitcher_plays.py
+
+      - name: Track plays
+        run: python track_mlb_plays.py
 
       - name: Run grading at midnight only
         run: |
