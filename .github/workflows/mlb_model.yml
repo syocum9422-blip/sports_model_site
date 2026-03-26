@@ -26,19 +26,20 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -r requirements.
-- 
-name: Run full MLB pipeline
-  run: |
-    python fetch_mlb_lines.py
-    python export_lineups_with_ids.py
-    python predict_hitter.py
-    python predict_pitchers.py
-    python build_full_hitter_projections.py
-    python build_full_pitcher_projections.py
-    python build_mlb_official_plays.py
-    python build_mlb_pitcher_plays.py
-    python track_mlb_plays.py
+        run: |
+          pip install pandas requests numpy joblib pybaseball scikit-learn
+
+      - name: Run full MLB pipeline
+        run: |
+          python fetch_mlb_lines.py
+          python export_lineups_with_ids.py
+          python predict_hitter.py
+          python predict_pitchers.py
+          python build_full_hitter_projections.py
+          python build_full_pitcher_projections.py
+          python build_mlb_official_plays.py
+          python build_mlb_pitcher_plays.py
+          python track_mlb_plays.py
 
       - name: Run grading at midnight only
         run: |
