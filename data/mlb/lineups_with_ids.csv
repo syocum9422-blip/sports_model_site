@@ -1,16 +1,12 @@
 team,hitter_name,hitter_id
 Arizona Diamondbacks,Adrian Del Castillo,680728
 Arizona Diamondbacks,Alek Thomas,677950
-Arizona Diamondbacks,Corbin Carroll,682998
-Arizona Diamondbacks,Gabriel Moreno,672515
 Arizona Diamondbacks,Geraldo Perdomo,672695
 Arizona Diamondbacks,Ildemaro Vargas,545121
 Arizona Diamondbacks,James McCann,543510
 Arizona Diamondbacks,Jorge Barrosa,678489
 Arizona Diamondbacks,Jose Fernandez,699912
 Arizona Diamondbacks,Ketel Marte,606466
-Arizona Diamondbacks,Luken Baker,663609
-Arizona Diamondbacks,Nolan Arenado,571448
 Arizona Diamondbacks,Tim Tawa,694374
 Athletics,Andy Ibáñez,628451
 Athletics,Austin Wynns,642851
@@ -18,6 +14,7 @@ Athletics,Brent Rooker,667670
 Athletics,Darell Hernaiz,687231
 Athletics,Denzel Clarke,672016
 Athletics,Jacob Wilson,805779
+Athletics,Jeff McNeil,643446
 Athletics,Lawrence Butler,671732
 Athletics,Max Muncy,691777
 Athletics,Nick Kurtz,701762
@@ -25,15 +22,11 @@ Athletics,Tyler Soderstrom,691016
 Chicago White Sox,Andrew Benintendi,643217
 Chicago White Sox,Chase Meidroth,805367
 Chicago White Sox,Colson Montgomery,695657
-Chicago White Sox,Derek Hill,656537
 Chicago White Sox,Dustin Harris,687957
 Chicago White Sox,Edgar Quero,700337
-Chicago White Sox,Lenyn Sosa,672820
 Chicago White Sox,Luisangel Acuña,682668
 Chicago White Sox,Miguel Vargas,678246
 Chicago White Sox,Munetaka Murakami,808959
-Chicago White Sox,Reese McGuire,624512
-Chicago White Sox,Tanner Murray,695020
 Chicago White Sox,Tristan Peters,671976
 Cincinnati Reds,Dane Myers,667472
 Cincinnati Reds,Elly De La Cruz,682829
@@ -44,6 +37,7 @@ Cincinnati Reds,P.J. Higgins,664731
 Cincinnati Reds,Sal Stewart,701398
 Cincinnati Reds,Spencer Steer,668715
 Cincinnati Reds,TJ Friedl,670770
+Cincinnati Reds,Will Benson,666181
 Colorado Rockies,Brenton Doyle,686668
 Colorado Rockies,Brett Sullivan,664954
 Colorado Rockies,Edouard Julien,666397
@@ -67,31 +61,31 @@ Detroit Tigers,Riley Greene,682985
 Detroit Tigers,Spencer Torkelson,679529
 Detroit Tigers,Zach McKinstry,656716
 Kansas City Royals,Bobby Witt Jr.,677951
-Kansas City Royals,Carter Jensen,695600
 Kansas City Royals,Isaac Collins,686555
 Kansas City Royals,Jac Caglianone,695506
 Kansas City Royals,Jonathan India,663697
 Kansas City Royals,Kyle Isbel,664728
 Kansas City Royals,Lane Thomas,657041
 Kansas City Royals,Maikel Garcia,672580
-Kansas City Royals,Michael Massey,686681
 Kansas City Royals,Salvador Perez,521692
-Kansas City Royals,Starling Marte,516782
-Kansas City Royals,Tyler Tolbert,686475
 Kansas City Royals,Vinnie Pasquantino,686469
 Miami Marlins,Agustín Ramírez,682663
 Miami Marlins,Graham Pauley,688363
 Miami Marlins,Griffin Conine,665052
+Miami Marlins,Heriberto Hernández,681715
 Miami Marlins,Jakob Marsee,805300
 Miami Marlins,Javier Sanoja,691594
 Miami Marlins,Liam Hicks,689414
 Miami Marlins,Otto Lopez,672640
 Miami Marlins,Owen Caissie,683357
 Miami Marlins,Xavier Edwards,669364
+Minnesota Twins,Austin Martin,668885
+Minnesota Twins,Brooks Lee,686797
 Minnesota Twins,Byron Buxton,621439
 Minnesota Twins,James Outman,681546
 Minnesota Twins,Josh Bell,605137
 Minnesota Twins,Kody Clemens,665019
+Minnesota Twins,Luke Keaschall,807712
 Minnesota Twins,Matt Wallner,670242
 Minnesota Twins,Royce Lewis,668904
 Minnesota Twins,Trevor Larnach,663616
@@ -99,16 +93,12 @@ Minnesota Twins,Tristan Gray,656484
 Minnesota Twins,Victor Caratini,605170
 New York Mets,Bo Bichette,666182
 New York Mets,Brett Baty,683146
-New York Mets,Carson Benge,701807
 New York Mets,Francisco Alvarez,682626
 New York Mets,Francisco Lindor,596019
-New York Mets,Jared Young,676724
-New York Mets,Jorge Polanco,593871
 New York Mets,Luis Robert Jr.,673357
 New York Mets,Luis Torrens,620443
 New York Mets,Marcus Semien,543760
 New York Mets,Mark Vientos,668901
-New York Mets,Ronny Mauricio,677595
 New York Mets,Tyrone Taylor,621438
 New York Yankees,Aaron Judge,592450
 New York Yankees,Amed Rosario,642708
@@ -116,9 +106,12 @@ New York Yankees,Austin Wells,669224
 New York Yankees,Ben Rice,700250
 New York Yankees,Cody Bellinger,641355
 New York Yankees,Giancarlo Stanton,519317
+New York Yankees,Jazz Chisholm Jr.,665862
 New York Yankees,José Caballero,676609
+New York Yankees,Paul Blackburn,621112
 New York Yankees,Randal Grichuk,545341
 New York Yankees,Ryan McMahon,641857
+New York Yankees,Trent Grisham,663757
 San Diego Padres,Bryce Johnson,669369
 San Diego Padres,Fernando Tatis Jr.,665487
 San Diego Padres,Freddy Fermin,666023
