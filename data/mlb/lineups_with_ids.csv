@@ -1,7 +1,4 @@
 team,hitter_name,hitter_id
-Arizona Diamondbacks,Adrian Del Castillo,680728
-Arizona Diamondbacks,Alek Thomas,677950
-Arizona Diamondbacks,Aramis Garcia,605244
 Arizona Diamondbacks,Corbin Carroll,682998
 Arizona Diamondbacks,Geraldo Perdomo,672695
 Arizona Diamondbacks,Ildemaro Vargas,545121
@@ -11,7 +8,6 @@ Arizona Diamondbacks,Jose Fernandez,699912
 Arizona Diamondbacks,Ketel Marte,606466
 Arizona Diamondbacks,Lourdes Gurriel Jr.,666971
 Arizona Diamondbacks,Nolan Arenado,571448
-Arizona Diamondbacks,Tim Tawa,694374
 Athletics,Austin Wynns,642851
 Athletics,Carlos Cortes,666126
 Athletics,Jacob Wilson,805779
@@ -94,13 +90,9 @@ Cleveland Guardians,Juan Brito,682877
 Cleveland Guardians,Kyle Manzardo,700932
 Cleveland Guardians,Rhys Hoskins,656555
 Cleveland Guardians,Steven Kwan,680757
-Colorado Rockies,Brenton Doyle,686668
-Colorado Rockies,Brett Sullivan,664954
 Colorado Rockies,Edouard Julien,666397
-Colorado Rockies,Ezequiel Tovar,678662
 Colorado Rockies,Hunter Goodman,696100
 Colorado Rockies,Jake McCarthy,664983
-Colorado Rockies,Jordan Beck,687597
 Colorado Rockies,Kyle Karros,691720
 Colorado Rockies,Mickey Moniak,666160
 Colorado Rockies,TJ Rumfield,681198
@@ -205,13 +197,9 @@ New York Yankees,Paul Goldschmidt,502671
 New York Yankees,Randal Grichuk,545341
 Philadelphia Phillies,Adolis García,666969
 Philadelphia Phillies,Alec Bohm,664761
-Philadelphia Phillies,Brandon Marsh,669016
 Philadelphia Phillies,Bryce Harper,547180
-Philadelphia Phillies,Bryson Stott,681082
-Philadelphia Phillies,Dylan Moore,664238
 Philadelphia Phillies,Edmundo Sosa,624641
 Philadelphia Phillies,Felix Reyes,694025
-Philadelphia Phillies,J.T. Realmuto,592663
 Philadelphia Phillies,Justin Crawford,702222
 Philadelphia Phillies,Kyle Schwarber,656941
 Philadelphia Phillies,Rafael Marchán,665561
@@ -283,10 +271,8 @@ Tampa Bay Rays,Richie Palacios,680700
 Tampa Bay Rays,Ryan Vilade,668723
 Tampa Bay Rays,Taylor Walls,670764
 Tampa Bay Rays,Yandy Díaz,650490
-Texas Rangers,Andrew McCutchen,457705
 Texas Rangers,Brandon Nimmo,607043
 Texas Rangers,Corey Seager,608369
-Texas Rangers,Danny Jansen,643376
 Texas Rangers,Evan Carter,694497
 Texas Rangers,Ezequiel Duran,677649
 Texas Rangers,Jake Burger,669394
@@ -294,8 +280,6 @@ Texas Rangers,Joc Pederson,592626
 Texas Rangers,Josh Jung,673962
 Texas Rangers,Josh Smith,669701
 Texas Rangers,Kyle Higashioka,543309
-Texas Rangers,Sam Haggerty,664059
-Texas Rangers,Wyatt Langford,694671
 Toronto Blue Jays,Andrés Giménez,665926
 Toronto Blue Jays,Daulton Varsho,662139
 Toronto Blue Jays,Ernie Clement,676391
