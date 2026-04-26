@@ -1,12 +1,8 @@
 team,hitter_name,hitter_id
 Arizona Diamondbacks,Adrian Del Castillo,680728
 Arizona Diamondbacks,Alek Thomas,677950
-Arizona Diamondbacks,Aramis Garcia,605244
 Arizona Diamondbacks,Corbin Carroll,682998
-Arizona Diamondbacks,Geraldo Perdomo,672695
 Arizona Diamondbacks,Ildemaro Vargas,545121
-Arizona Diamondbacks,James McCann,543510
-Arizona Diamondbacks,Jorge Barrosa,678489
 Arizona Diamondbacks,Jose Fernandez,699912
 Arizona Diamondbacks,Ketel Marte,606466
 Arizona Diamondbacks,Lourdes Gurriel Jr.,666971
@@ -54,10 +50,6 @@ Chicago Cubs,Dansby Swanson,621020
 Chicago Cubs,Ian Happ,664023
 Chicago Cubs,Matt Shaw,807713
 Chicago Cubs,Michael Busch,683737
-Chicago Cubs,Michael Conforto,624424
-Chicago Cubs,Miguel Amaya,665804
-Chicago Cubs,Moisés Ballesteros,694208
-Chicago Cubs,Nicky Lopez,670032
 Chicago Cubs,Nico Hoerner,663538
 Chicago Cubs,Pete Crow-Armstrong,691718
 Chicago Cubs,Seiya Suzuki,673548
@@ -125,40 +117,28 @@ Kansas City Royals,Salvador Perez,521692
 Kansas City Royals,Starling Marte,516782
 Kansas City Royals,Vinnie Pasquantino,686469
 Los Angeles Angels,Adam Frazier,624428
-Los Angeles Angels,Bryce Teodosio,669326
 Los Angeles Angels,Jo Adell,666176
 Los Angeles Angels,Jorge Soler,624585
 Los Angeles Angels,Josh Lowe,666139
-Los Angeles Angels,Logan O'Hoppe,681351
 Los Angeles Angels,Mike Trout,545361
 Los Angeles Angels,Nolan Schanuel,694384
-Los Angeles Angels,Oswald Peraza,672724
 Los Angeles Angels,Travis d'Arnaud,518595
-Los Angeles Angels,Vaughn Grissom,687093
 Los Angeles Angels,Yoán Moncada,660162
 Los Angeles Angels,Zach Neto,687263
-Los Angeles Dodgers,Alex Call,669743
-Los Angeles Dodgers,Alex Freeland,690976
 Los Angeles Dodgers,Andy Pages,681624
 Los Angeles Dodgers,Dalton Rushing,687221
 Los Angeles Dodgers,Freddie Freeman,518692
 Los Angeles Dodgers,Hyeseong Kim,808975
 Los Angeles Dodgers,Kyle Tucker,663656
-Los Angeles Dodgers,Max Muncy,571970
 Los Angeles Dodgers,Miguel Rojas,500743
 Los Angeles Dodgers,Santiago Espinal,669289
 Los Angeles Dodgers,Shohei Ohtani,660271
 Los Angeles Dodgers,Teoscar Hernández,606192
-Los Angeles Dodgers,Will Smith,669257
-Miami Marlins,Agustín Ramírez,682663
 Miami Marlins,Connor Norby,681393
-Miami Marlins,Esteury Ruiz,665923
 Miami Marlins,Graham Pauley,688363
 Miami Marlins,Heriberto Hernández,681715
 Miami Marlins,Jakob Marsee,805300
-Miami Marlins,Javier Sanoja,691594
 Miami Marlins,Kyle Stowers,669065
-Miami Marlins,Leo Jiménez,677870
 Miami Marlins,Liam Hicks,689414
 Miami Marlins,Otto Lopez,672640
 Miami Marlins,Owen Caissie,683357
@@ -217,33 +197,24 @@ Pittsburgh Pirates,Marcell Ozuna,542303
 Pittsburgh Pirates,Nick Gonzales,693304
 Pittsburgh Pirates,Nick Yorke,694377
 Pittsburgh Pirates,Ryan O'Hearn,656811
-San Diego Padres,Bryce Johnson,669369
 San Diego Padres,Fernando Tatis Jr.,665487
-San Diego Padres,Freddy Fermin,666023
 San Diego Padres,Gavin Sheets,657757
 San Diego Padres,Jackson Merrill,701538
 San Diego Padres,Jake Cronenworth,630105
 San Diego Padres,Luis Campusano,669134
 San Diego Padres,Manny Machado,592518
 San Diego Padres,Miguel Andujar,609280
-San Diego Padres,Nick Castellanos,592206
 San Diego Padres,Ramón Laureano,657656
-San Diego Padres,Sung-Mun Song,823550
-San Diego Padres,Ty France,664034
 San Diego Padres,Xander Bogaerts,593428
 San Francisco Giants,Casey Schmitt,669477
 San Francisco Giants,Christian Koss,683766
 San Francisco Giants,Drew Gilbert,687551
-San Francisco Giants,Eric Haase,606992
 San Francisco Giants,Heliot Ramos,671218
-San Francisco Giants,Jerar Encarnacion,666464
 San Francisco Giants,Jung Hoo Lee,808982
 San Francisco Giants,Luis Arraez,650333
 San Francisco Giants,Matt Chapman,656305
 San Francisco Giants,Patrick Bailey,672275
 San Francisco Giants,Rafael Devers,646240
-San Francisco Giants,Will Brennan,686823
-San Francisco Giants,Willy Adames,642715
 Seattle Mariners,Cal Raleigh,663728
 Seattle Mariners,Cole Young,702284
 Seattle Mariners,Connor Joe,656582
