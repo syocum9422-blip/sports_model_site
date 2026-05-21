@@ -1,25 +1,17 @@
 team,hitter_name,hitter_id
 Arizona Diamondbacks,Adrian Del Castillo,680728
-Arizona Diamondbacks,Aramis Garcia,605244
 Arizona Diamondbacks,Corbin Carroll,682998
 Arizona Diamondbacks,Gabriel Moreno,672515
 Arizona Diamondbacks,Geraldo Perdomo,672695
 Arizona Diamondbacks,Ildemaro Vargas,545121
-Arizona Diamondbacks,Jorge Barrosa,678489
-Arizona Diamondbacks,Jose Fernandez,699912
 Arizona Diamondbacks,Ketel Marte,606466
 Arizona Diamondbacks,Lourdes Gurriel Jr.,666971
 Arizona Diamondbacks,Nolan Arenado,571448
 Arizona Diamondbacks,Ryan Waldschmidt,814439
-Arizona Diamondbacks,Tim Tawa,694374
-Athletics,Alika Williams,675961
 Athletics,Brent Rooker,667670
 Athletics,Carlos Cortes,666126
-Athletics,Colby Thomas,687515
 Athletics,Darell Hernaiz,687231
-Athletics,Henry Bolte,703607
 Athletics,Jeff McNeil,643446
-Athletics,Jonah Heim,641680
 Athletics,Lawrence Butler,671732
 Athletics,Nick Kurtz,701762
 Athletics,Shea Langeliers,669127
@@ -70,16 +62,12 @@ Detroit Tigers,Zach McKinstry,656716
 Detroit Tigers,Zack Short,670097
 Los Angeles Angels,Adam Frazier,624428
 Los Angeles Angels,Jo Adell,666176
-Los Angeles Angels,Jorge Soler,624585
 Los Angeles Angels,Jose Siri,642350
 Los Angeles Angels,Josh Lowe,666139
-Los Angeles Angels,Logan O'Hoppe,681351
 Los Angeles Angels,Mike Trout,545361
 Los Angeles Angels,Nolan Schanuel,694384
-Los Angeles Angels,Oswald Peraza,672724
 Los Angeles Angels,Sebastián Rivero,665861
 Los Angeles Angels,Vaughn Grissom,687093
-Los Angeles Angels,Yoán Moncada,660162
 Los Angeles Angels,Zach Neto,687263
 Miami Marlins,Christopher Morel,666624
 Miami Marlins,Jakob Marsee,805300
@@ -143,5 +131,8 @@ Washington Nationals,Daylen Lile,695734
 Washington Nationals,Dylan Crews,686611
 Washington Nationals,Jacob Young,696285
 Washington Nationals,James Wood,695578
+Washington Nationals,Jorbit Vivas,678391
+Washington Nationals,José Tena,677588
 Washington Nationals,Keibert Ruiz,660688
+Washington Nationals,Luis García Jr.,671277
 Washington Nationals,Nasim Nuñez,683083
