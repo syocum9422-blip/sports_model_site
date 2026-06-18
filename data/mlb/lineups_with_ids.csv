@@ -1,4 +1,13 @@
 team,hitter_name,hitter_id
+Athletics,Carlos Cortes,666126
+Athletics,Henry Bolte,703607
+Athletics,Jacob Wilson,805779
+Athletics,Jeff McNeil,643446
+Athletics,Jonah Heim,641680
+Athletics,Nick Kurtz,701762
+Athletics,Shea Langeliers,669127
+Athletics,Tyler Soderstrom,691016
+Athletics,Zack Gelof,680869
 Atlanta Braves,Austin Riley,663586
 Atlanta Braves,Dominic Smith,642086
 Atlanta Braves,Drake Baldwin,686948
@@ -17,6 +26,7 @@ Baltimore Orioles,Blaze Alexander,677942
 Baltimore Orioles,Colton Cowser,681297
 Baltimore Orioles,Gunnar Henderson,683002
 Baltimore Orioles,Jackson Holliday,702616
+Baltimore Orioles,Jeremiah Jackson,669236
 Baltimore Orioles,Leody Taveras,665750
 Baltimore Orioles,Pete Alonso,624413
 Baltimore Orioles,Samuel Basallo,694212
@@ -60,19 +70,36 @@ Kansas City Royals,Michael Massey,686681
 Kansas City Royals,Nick Loftin,679845
 Kansas City Royals,Salvador Perez,521692
 Kansas City Royals,Starling Marte,516782
+Los Angeles Angels,Denzer Guzman,694203
+Los Angeles Angels,Donovan Walton,622268
+Los Angeles Angels,Jo Adell,666176
+Los Angeles Angels,Jose Siri,642350
+Los Angeles Angels,Logan O'Hoppe,681351
+Los Angeles Angels,Mike Trout,545361
+Los Angeles Angels,Nick Madrigal,663611
+Los Angeles Angels,Nolan Schanuel,694384
+Los Angeles Angels,Oswald Peraza,672724
+Los Angeles Angels,Tyler Heineman,623168
+Los Angeles Angels,Vaughn Grissom,687093
+Los Angeles Angels,Wade Meckler,685133
+Los Angeles Angels,Zach Neto,687263
 Milwaukee Brewers,Andrew Vaughn,683734
 Milwaukee Brewers,Blake Perkins,663368
 Milwaukee Brewers,Brice Turang,668930
 Milwaukee Brewers,Christian Yelich,592885
 Milwaukee Brewers,Cooper Pratt,806198
+Milwaukee Brewers,David Hamilton,666152
+Milwaukee Brewers,Garrett Mitchell,669003
 Milwaukee Brewers,Gary Sánchez,596142
 Milwaukee Brewers,Jackson Chourio,694192
 Milwaukee Brewers,Jake Bauers,641343
 Milwaukee Brewers,Joey Ortiz,687401
+Milwaukee Brewers,William Contreras,661388
 Minnesota Twins,Brooks Lee,686797
 Minnesota Twins,Byron Buxton,621439
 Minnesota Twins,Josh Bell,605137
 Minnesota Twins,Kody Clemens,665019
+Minnesota Twins,Kyler Fedko,693459
 Minnesota Twins,Luke Keaschall,807712
 Minnesota Twins,Royce Lewis,668904
 Minnesota Twins,Ryan Kreidler,668952
@@ -83,15 +110,11 @@ New York Mets,A.J. Ewing,805999
 New York Mets,Bo Bichette,666182
 New York Mets,Brett Baty,683146
 New York Mets,Carson Benge,701807
-New York Mets,Eric Wagaman,676572
 New York Mets,Francisco Alvarez,682626
 New York Mets,Jared Young,676724
 New York Mets,Juan Soto,665742
-New York Mets,Luis Torrens,620443
 New York Mets,MJ Melendez,669004
 New York Mets,Marcus Semien,543760
-New York Mets,Mark Vientos,668901
-New York Mets,Zack Short,670097
 New York Yankees,Ben Rice,700250
 New York Yankees,Cody Bellinger,641355
 New York Yankees,J.C. Escarra,641555
@@ -108,6 +131,7 @@ Philadelphia Phillies,Bryson Stott,681082
 Philadelphia Phillies,Derek Hill,656537
 Philadelphia Phillies,Edmundo Sosa,624641
 Philadelphia Phillies,J.T. Realmuto,592663
+Philadelphia Phillies,Justin Crawford,702222
 Philadelphia Phillies,Kyle Schwarber,656941
 Philadelphia Phillies,Trea Turner,607208
 San Francisco Giants,Bryce Eldridge,805811
@@ -143,12 +167,15 @@ St. Louis Cardinals,Nelson Velázquez,676369
 St. Louis Cardinals,Pedro Pagés,686780
 Texas Rangers,Alejandro Osuna,696030
 Texas Rangers,Brandon Nimmo,607043
+Texas Rangers,Cody Freeman,683227
 Texas Rangers,Ezequiel Duran,677649
 Texas Rangers,Jake Burger,669394
 Texas Rangers,Joc Pederson,592626
 Texas Rangers,Josh Jung,673962
 Texas Rangers,Josh Smith,669701
+Texas Rangers,Justin Foscue,679822
 Texas Rangers,Kyle Higashioka,543309
+Texas Rangers,Nicky Lopez,670032
 Texas Rangers,Wyatt Langford,694671
 Toronto Blue Jays,Andrés Giménez,665926
 Toronto Blue Jays,Brandon Valenzuela,678218
