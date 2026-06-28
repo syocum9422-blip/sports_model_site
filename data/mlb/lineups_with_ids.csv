@@ -18,18 +18,14 @@ Athletics,Lawrence Butler,671732
 Athletics,Max Muncy,691777
 Athletics,Shea Langeliers,669127
 Atlanta Braves,Austin Riley,663586
-Atlanta Braves,Dominic Smith,642086
 Atlanta Braves,Drake Baldwin,686948
 Atlanta Braves,Eli White,642201
 Atlanta Braves,Ha-Seong Kim,673490
 Atlanta Braves,Joey Bart,663698
-Atlanta Braves,Jorge Mateo,622761
 Atlanta Braves,Matt Olson,621566
 Atlanta Braves,Mauricio Dubón,643289
 Atlanta Braves,Michael Harris II,671739
-Atlanta Braves,Mike Yastrzemski,573262
 Atlanta Braves,Ozzie Albies,645277
-Atlanta Braves,Rowdy Tellez,642133
 Baltimore Orioles,Adley Rutschman,668939
 Baltimore Orioles,Coby Mayo,691723
 Baltimore Orioles,Colton Cowser,681297
@@ -106,6 +102,8 @@ Detroit Tigers,Kevin McGonigle,805808
 Detroit Tigers,Matt Vierling,663837
 Detroit Tigers,Riley Greene,682985
 Detroit Tigers,Zach McKinstry,656716
+Houston Astros,Brice Matthews,694728
+Houston Astros,Cam Smith,701358
 Houston Astros,Christian Walker,572233
 Houston Astros,Isaac Paredes,670623
 Houston Astros,Jake Meyers,676694
@@ -169,11 +167,13 @@ Minnesota Twins,Luke Keaschall,807712
 Minnesota Twins,Royce Lewis,668904
 Minnesota Twins,Ryan Kreidler,668952
 Minnesota Twins,Trevor Larnach,663616
+New York Mets,A.J. Ewing,805999
 New York Mets,Bo Bichette,666182
 New York Mets,Brett Baty,683146
 New York Mets,Carson Benge,701807
 New York Mets,Eric Wagaman,676572
 New York Mets,Francisco Alvarez,682626
+New York Mets,Jared Young,676724
 New York Mets,Juan Soto,665742
 New York Mets,Luis Torrens,620443
 New York Mets,Mark Vientos,668901
@@ -218,12 +218,8 @@ San Diego Padres,Rodolfo Durán,660710
 San Diego Padres,Samad Taylor,669392
 San Diego Padres,Sung-Mun Song,823550
 San Diego Padres,Xander Bogaerts,593428
-San Francisco Giants,Bryce Eldridge,805811
-San Francisco Giants,Buddy Kennedy,671083
-San Francisco Giants,Casey Schmitt,669477
-San Francisco Giants,Drew Cavanaugh,701852
-San Francisco Giants,Drew Gilbert,687551
 San Francisco Giants,Eric Haase,606992
+San Francisco Giants,Heliot Ramos,671218
 San Francisco Giants,Jonah Cox,813841
 San Francisco Giants,Jung Hoo Lee,808982
 San Francisco Giants,Luis Arraez,650333
@@ -255,6 +251,7 @@ Tampa Bay Rays,Chandler Simpson,802415
 Tampa Bay Rays,Jonathan Aranda,666018
 Tampa Bay Rays,Junior Caminero,691406
 Tampa Bay Rays,Nick Fortes,663743
+Tampa Bay Rays,Richie Palacios,680700
 Tampa Bay Rays,Taylor Walls,670764
 Tampa Bay Rays,Victor Mesa Jr.,683748
 Tampa Bay Rays,Yandy Díaz,650490
@@ -267,6 +264,8 @@ Texas Rangers,Ezequiel Duran,677649
 Texas Rangers,Jake Burger,669394
 Texas Rangers,Joc Pederson,592626
 Texas Rangers,Josh Jung,673962
+Texas Rangers,Justin Foscue,679822
+Texas Rangers,Nicky Lopez,670032
 Toronto Blue Jays,Alejandro Kirk,672386
 Toronto Blue Jays,Andrés Giménez,665926
 Toronto Blue Jays,Daulton Varsho,662139
