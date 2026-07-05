@@ -5,6 +5,7 @@ Arizona Diamondbacks,Geraldo Perdomo,672695
 Arizona Diamondbacks,Ildemaro Vargas,545121
 Arizona Diamondbacks,Ketel Marte,606466
 Arizona Diamondbacks,Lourdes Gurriel Jr.,666971
+Arizona Diamondbacks,Max Kepler,596146
 Arizona Diamondbacks,Pavin Smith,656976
 Arizona Diamondbacks,Tim Tawa,694374
 Arizona Diamondbacks,Tommy Troy,694371
@@ -20,7 +21,9 @@ Athletics,Zack Gelof,680869
 Atlanta Braves,Austin Riley,663586
 Atlanta Braves,Dominic Smith,642086
 Atlanta Braves,Drake Baldwin,686948
+Atlanta Braves,Eli White,642201
 Atlanta Braves,Jim Jarvis,805347
+Atlanta Braves,Jorge Mateo,622761
 Atlanta Braves,Matt Olson,621566
 Atlanta Braves,Mauricio Dubón,643289
 Atlanta Braves,Michael Harris II,671739
@@ -31,22 +34,19 @@ Baltimore Orioles,Blaze Alexander,677942
 Baltimore Orioles,Coby Mayo,691723
 Baltimore Orioles,Dylan Beavers,687637
 Baltimore Orioles,Gunnar Henderson,683002
+Baltimore Orioles,Jackson Holliday,702616
 Baltimore Orioles,Jeremiah Jackson,669236
 Baltimore Orioles,Leody Taveras,665750
 Baltimore Orioles,Pete Alonso,624413
 Baltimore Orioles,Samuel Basallo,694212
 Baltimore Orioles,Taylor Ward,621493
 Baltimore Orioles,Tyler O'Neill,641933
-Boston Red Sox,Andruw Monasterio,655316
 Boston Red Sox,Anthony Seigler,678011
 Boston Red Sox,Caleb Durbin,702332
 Boston Red Sox,Carlos Narváez,665966
 Boston Red Sox,Ceddanne Rafaela,678882
-Boston Red Sox,Connor Wong,657136
 Boston Red Sox,Jarren Duran,680776
 Boston Red Sox,Masataka Yoshida,807799
-Boston Red Sox,Nate Eaton,681987
-Boston Red Sox,Romy Gonzalez,663853
 Boston Red Sox,Tsung-Che Cheng,691907
 Boston Red Sox,Willson Contreras,575929
 Boston Red Sox,Wilyer Abreu,677800
@@ -57,6 +57,7 @@ Chicago Cubs,Ian Happ,664023
 Chicago Cubs,Kevin Alcántara,682634
 Chicago Cubs,Michael Busch,683737
 Chicago Cubs,Nico Hoerner,663538
+Chicago Cubs,Pedro Ramírez,699393
 Chicago Cubs,Pete Crow-Armstrong,691718
 Chicago Cubs,Seiya Suzuki,673548
 Chicago White Sox,Andrew Benintendi,643217
@@ -65,7 +66,9 @@ Chicago White Sox,Chase Meidroth,805367
 Chicago White Sox,Colson Montgomery,695657
 Chicago White Sox,Jacob Gonzalez,694378
 Chicago White Sox,Kyle Teel,691019
+Chicago White Sox,Luisangel Acuña,682668
 Chicago White Sox,Miguel Vargas,678246
+Chicago White Sox,Randal Grichuk,545341
 Chicago White Sox,Sam Antonacci,803011
 Chicago White Sox,Tristan Peters,671976
 Cincinnati Reds,Edwin Arroyo,695490
@@ -77,16 +80,22 @@ Cincinnati Reds,Sal Stewart,701398
 Cincinnati Reds,Spencer Steer,668715
 Cincinnati Reds,TJ Friedl,670770
 Cincinnati Reds,Tyler Stephenson,663886
+Cleveland Guardians,Austin Hedges,595978
+Cleveland Guardians,Brayan Rocchio,677587
 Cleveland Guardians,Chase DeLauter,800050
 Cleveland Guardians,Cooper Ingle,694876
 Cleveland Guardians,Daniel Schneemann,682177
+Cleveland Guardians,David Fry,681807
 Cleveland Guardians,Gabriel Arias,672356
 Cleveland Guardians,Kahlil Watson,696135
 Cleveland Guardians,Kyle Manzardo,700932
 Cleveland Guardians,Patrick Bailey,672275
+Cleveland Guardians,Rhys Hoskins,656555
 Cleveland Guardians,Steven Kwan,680757
 Cleveland Guardians,Travis Bazzana,683953
+Colorado Rockies,Braxton Fulford,690924
 Colorado Rockies,Brett Sullivan,664954
+Colorado Rockies,Cole Carrigg,694249
 Colorado Rockies,Edouard Julien,666397
 Colorado Rockies,Ezequiel Tovar,678662
 Colorado Rockies,Hunter Goodman,696100
@@ -95,15 +104,19 @@ Colorado Rockies,Kyle Karros,691720
 Colorado Rockies,Mickey Moniak,666160
 Colorado Rockies,TJ Rumfield,681198
 Colorado Rockies,Troy Johnston,687859
+Colorado Rockies,Willi Castro,650489
 Detroit Tigers,Colt Keith,690993
 Detroit Tigers,Dillon Dingler,693307
+Detroit Tigers,Hao-Yu Lee,701678
 Detroit Tigers,Jake Rogers,668670
 Detroit Tigers,James Outman,681546
 Detroit Tigers,Kerry Carpenter,681481
 Detroit Tigers,Kevin McGonigle,805808
+Detroit Tigers,Matt Vierling,663837
 Detroit Tigers,Riley Greene,682985
 Detroit Tigers,Spencer Torkelson,679529
 Detroit Tigers,Zach McKinstry,656716
+Houston Astros,Brice Matthews,694728
 Houston Astros,Cam Smith,701358
 Houston Astros,Christian Vázquez,543877
 Houston Astros,Christian Walker,572233
@@ -113,6 +126,7 @@ Houston Astros,LaMonte Wade Jr.,664774
 Houston Astros,Nick Allen,669397
 Houston Astros,Taylor Trammell,666211
 Houston Astros,Yordan Alvarez,670541
+Houston Astros,Zach Dezenzo,701305
 Kansas City Royals,Bobby Witt Jr.,677951
 Kansas City Royals,Carter Jensen,695600
 Kansas City Royals,Isaac Collins,686555
@@ -121,21 +135,19 @@ Kansas City Royals,Josh Rojas,668942
 Kansas City Royals,Kameron Misner,670224
 Kansas City Royals,Lane Thomas,657041
 Kansas City Royals,Michael Massey,686681
+Kansas City Royals,Nick Loftin,679845
 Kansas City Royals,Salvador Perez,521692
 Los Angeles Angels,Denzer Guzman,694203
-Los Angeles Angels,Donovan Walton,622268
 Los Angeles Angels,Jo Adell,666176
 Los Angeles Angels,Jorge Soler,624585
 Los Angeles Angels,Jose Siri,642350
 Los Angeles Angels,Josh Lowe,666139
 Los Angeles Angels,Logan O'Hoppe,681351
-Los Angeles Angels,Nolan Schanuel,694384
 Los Angeles Angels,Oswald Peraza,672724
-Los Angeles Angels,Tyler Heineman,623168
 Los Angeles Angels,Vaughn Grissom,687093
-Los Angeles Angels,Wade Meckler,685133
 Los Angeles Angels,Zach Neto,687263
 Los Angeles Dodgers,Alex Call,669743
+Los Angeles Dodgers,Alex Freeland,690976
 Los Angeles Dodgers,Andy Pages,681624
 Los Angeles Dodgers,Eliezer Alfonzo,672613
 Los Angeles Dodgers,Freddie Freeman,518692
@@ -143,9 +155,9 @@ Los Angeles Dodgers,Miguel Rojas,500743
 Los Angeles Dodgers,Mookie Betts,605141
 Los Angeles Dodgers,Shohei Ohtani,660271
 Los Angeles Dodgers,Teoscar Hernández,606192
-Los Angeles Dodgers,Tommy Edman,669242
 Miami Marlins,Brian Navarreto,640459
 Miami Marlins,Esteury Ruiz,665923
+Miami Marlins,Griffin Conine,665052
 Miami Marlins,Heriberto Hernández,681715
 Miami Marlins,Jakob Marsee,805300
 Miami Marlins,Javier Sanoja,691594
@@ -162,6 +174,7 @@ Milwaukee Brewers,Gary Sánchez,596142
 Milwaukee Brewers,Jackson Chourio,694192
 Milwaukee Brewers,Jake Bauers,641343
 Milwaukee Brewers,Joey Ortiz,687401
+Milwaukee Brewers,Sal Frelick,686217
 Minnesota Twins,Austin Martin,668885
 Minnesota Twins,Brooks Lee,686797
 Minnesota Twins,Byron Buxton,621439
@@ -177,6 +190,7 @@ New York Mets,Bo Bichette,666182
 New York Mets,Brett Baty,683146
 New York Mets,Carson Benge,701807
 New York Mets,Francisco Lindor,596019
+New York Mets,Jared Young,676724
 New York Mets,Juan Soto,665742
 New York Mets,Luis Torrens,620443
 New York Mets,Mark Vientos,668901
@@ -200,10 +214,12 @@ Philadelphia Phillies,Garrett Stubbs,596117
 Philadelphia Phillies,Justin Crawford,702222
 Philadelphia Phillies,Kyle Schwarber,656941
 Philadelphia Phillies,Trea Turner,607208
+Pittsburgh Pirates,Billy Cook,695257
 Pittsburgh Pirates,Brandon Lowe,664040
 Pittsburgh Pirates,Bryan Reynolds,668804
 Pittsburgh Pirates,Endy Rodríguez,682848
 Pittsburgh Pirates,Esmerlyn Valdez,699013
+Pittsburgh Pirates,Henry Davis,680779
 Pittsburgh Pirates,Jake Mangum,663968
 Pittsburgh Pirates,Jared Triolo,669707
 Pittsburgh Pirates,Konnor Griffin,804606
@@ -214,12 +230,8 @@ San Diego Padres,Fernando Tatis Jr.,665487
 San Diego Padres,Gavin Sheets,657757
 San Diego Padres,Jackson Merrill,701538
 San Diego Padres,Jake Cronenworth,630105
-San Diego Padres,Jase Bowen,687749
 San Diego Padres,Luis Campusano,669134
 San Diego Padres,Manny Machado,592518
-San Diego Padres,Miguel Andujar,609280
-San Diego Padres,Rodolfo Durán,660710
-San Diego Padres,Samad Taylor,669392
 San Diego Padres,Sung-Mun Song,823550
 San Diego Padres,Ty France,664034
 San Diego Padres,Xander Bogaerts,593428
@@ -250,15 +262,20 @@ St. Louis Cardinals,José Fermín,665877
 St. Louis Cardinals,Lars Nootbaar,663457
 St. Louis Cardinals,Masyn Winn,691026
 St. Louis Cardinals,Nathan Church,701675
+St. Louis Cardinals,Nelson Velázquez,676369
 Tampa Bay Rays,Ben Williamson,810938
 Tampa Bay Rays,Cedric Mullins,656775
 Tampa Bay Rays,Chandler Simpson,802415
 Tampa Bay Rays,Hunter Feduccia,676439
 Tampa Bay Rays,Jonathan Aranda,666018
+Tampa Bay Rays,Jonny DeLuca,676356
 Tampa Bay Rays,Junior Caminero,691406
+Tampa Bay Rays,Nick Fortes,663743
 Tampa Bay Rays,Richie Palacios,680700
+Tampa Bay Rays,Ryan Vilade,668723
 Tampa Bay Rays,Victor Mesa Jr.,683748
 Tampa Bay Rays,Yandy Díaz,650490
+Texas Rangers,Alejandro Osuna,696030
 Texas Rangers,Brandon Nimmo,607043
 Texas Rangers,Cam Cauley,695508
 Texas Rangers,Elias Díaz,553869
@@ -277,6 +294,7 @@ Toronto Blue Jays,Nathan Lukes,664770
 Toronto Blue Jays,Sean Keys,815873
 Toronto Blue Jays,Vladimir Guerrero Jr.,665489
 Toronto Blue Jays,Yohendrick Piñango,682818
+Washington Nationals,Andrés Chaparro,665953
 Washington Nationals,CJ Abrams,682928
 Washington Nationals,Curtis Mead,678554
 Washington Nationals,Daylen Lile,695734
