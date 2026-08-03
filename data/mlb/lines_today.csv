@@ -1,7 +1,7 @@
 PLAYER_NAME,TEAM_ID,STAT,LINE,PLAYER_TYPE
 Kyle Schwarber,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
-Bryce Harper,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
 James Wood,30a238e0-4b7b-4bbb-a471-6b1b7a184a22,HIT,0.5,HITTER
+Bryce Harper,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
 Trea Turner,25101c7a-340a-4c08-a93d-979242271c89,HIT,1.5,HITTER
 CJ Abrams,30a238e0-4b7b-4bbb-a471-6b1b7a184a22,HIT,0.5,HITTER
 Aaron Nola,25101c7a-340a-4c08-a93d-979242271c89,K,5.5,PITCHER
@@ -16,9 +16,8 @@ Derek Hill,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
 Jorbit Vivas,30a238e0-4b7b-4bbb-a471-6b1b7a184a22,HIT,0.5,HITTER
 Nasim Nuñez,30a238e0-4b7b-4bbb-a471-6b1b7a184a22,HIT,0.5,HITTER
 Andrew Alvarez,30a238e0-4b7b-4bbb-a471-6b1b7a184a22,K,4.5,PITCHER
-J.T. Realmuto,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
+Garrett Stubbs,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
 Bryan De La Cruz,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
-Justin Crawford,25101c7a-340a-4c08-a93d-979242271c89,HIT,0.5,HITTER
 Paul Goldschmidt,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
 Lars Nootbaar,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Ben Rice,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
@@ -28,16 +27,17 @@ Alec Burleson,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Masyn Winn,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Ivan Herrera,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Austin Wells,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
-Michael McGreevy,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,K,4.5,PITCHER
-Jasson Domínguez,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
+Luis García,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
+Michael McGreevy,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,K,3.5,PITCHER
 Jordan Walker,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
+Jasson Domínguez,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
 Cam Schlittler,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,K,6.5,PITCHER
 José Caballero,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
-Spencer Jones,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
-José Fermín,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Jimmy Crooks,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
+Spencer Jones,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
 Jazz Chisholm,bbb3bae8-1013-4168-8f72-b75d55f0d7f6,HIT,0.5,HITTER
 JJ Wetherholt,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
+José Fermín,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Nathan Church,e83a3a19-0890-46d9-967f-f7b29d7d9ca6,HIT,0.5,HITTER
 Christian Yelich,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
 Jackson Chourio,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
@@ -53,20 +53,20 @@ Jake Bauers,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
 David Hamilton,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
 Garrett Mitchell,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
 Endy Rodríguez,05c90f99-41d7-4a46-b5c6-0022ff8256fc,HIT,0.5,HITTER
-Bubba Chandler,05c90f99-41d7-4a46-b5c6-0022ff8256fc,K,4.5,PITCHER
 Brandon Sproat,3c30988b-1884-4bc5-ad88-24110c6a22b2,K,5.5,PITCHER
-Cooper Pratt,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
-Luis Lara,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
-Esmerlyn Valdez,05c90f99-41d7-4a46-b5c6-0022ff8256fc,HIT,0.5,HITTER
+Bubba Chandler,05c90f99-41d7-4a46-b5c6-0022ff8256fc,K,4.5,PITCHER
 Jacob Gonzalez,05c90f99-41d7-4a46-b5c6-0022ff8256fc,HIT,0.5,HITTER
+Cooper Pratt,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
+Esmerlyn Valdez,05c90f99-41d7-4a46-b5c6-0022ff8256fc,HIT,0.5,HITTER
+Luis Lara,3c30988b-1884-4bc5-ad88-24110c6a22b2,HIT,0.5,HITTER
 Shohei Ohtani,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Mookie Betts,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Freddie Freeman,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Kyle Tucker,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Pete Crow-Armstrong,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
-Teoscar Hernández,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
-Seiya Suzuki,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
 Alex Bregman,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
+Seiya Suzuki,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
+Teoscar Hernández,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Matthew Boyd,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,K,4.5,PITCHER
 Andy Pages,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 Max Muncy,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
@@ -79,8 +79,8 @@ Carson Kelly,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
 Dalton Rushing,5a5a4e8a-d364-4fba-9b76-add9ed5d9ad7,HIT,0.5,HITTER
 James Triantos,0a2c9da4-7227-4055-bf48-bb4bf5c8f410,HIT,0.5,HITTER
 Logan Webb,f6696cd3-afca-4145-a3c5-25abe16dd193,K,4.5,PITCHER
-Rafael Devers,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Corey Seager,f85132d6-ce4f-461f-ab0d-97810d017c94,HIT,0.5,HITTER
+Rafael Devers,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Jung Hoo Lee,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Heliot Ramos,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Wyatt Langford,f85132d6-ce4f-461f-ab0d-97810d017c94,HIT,0.5,HITTER
@@ -98,8 +98,8 @@ Grant McCray,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Osleivis Basabe,f6696cd3-afca-4145-a3c5-25abe16dd193,HIT,0.5,HITTER
 Vladimir Guerrero,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 Jose Altuve,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,0.5,HITTER
-George Springer,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 Jeremy Peña,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,1.5,HITTER
+George Springer,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 Christian Walker,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,0.5,HITTER
 Yordan Alvarez,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,1.5,HITTER
 Isaac Paredes,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,0.5,HITTER
@@ -113,9 +113,9 @@ Nathan Lukes,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 Cristian Javier,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,K,3.5,PITCHER
 Taylor Trammell,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,0.5,HITTER
 Shane Bieber,4d5e7fe3-d039-43fc-8084-b7f16219c9be,K,3.5,PITCHER
-Kazuma Okamoto,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
-Brandon Valenzuela,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 LaMonte Wade,2ac58cf3-7bb5-47f6-a214-eaeeb9d78d52,HIT,0.5,HITTER
+Brandon Valenzuela,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
+Kazuma Okamoto,4d5e7fe3-d039-43fc-8084-b7f16219c9be,HIT,0.5,HITTER
 Junior Caminero,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 Yandy Díaz,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 Michael Lorenzen,9be33c5c-6127-4d03-bbbc-e14900856b85,K,3.5,PITCHER
@@ -124,8 +124,8 @@ Jonathan Aranda,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 Cedric Mullins,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 Mickey Moniak,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
 Ezequiel Tovar,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
-Tyler Freeman,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
 Chandler Simpson,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
+Tyler Freeman,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
 Willi Castro,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
 Taylor Walls,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,0.5,HITTER
 Jake McCarthy,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,1.5,HITTER
@@ -133,9 +133,9 @@ Kyle Karros,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,1.5,HITTER
 Hunter Feduccia,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,0.5,HITTER
 Ian Seymour,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,K,4.5,PITCHER
 Richie Palacios,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,0.5,HITTER
+Victor Mesa,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 TJ Rumfield,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,0.5,HITTER
 Cole Carrigg,9be33c5c-6127-4d03-bbbc-e14900856b85,HIT,1.5,HITTER
-Victor Mesa,f8aa5fb3-bf30-4f1d-bc89-7dc208a9c5d3,HIT,1.5,HITTER
 Fernando Tatis,898ed118-c7ab-4e09-bff4-2a2a7af29053,HIT,1.5,HITTER
 Manny Machado,898ed118-c7ab-4e09-bff4-2a2a7af29053,HIT,0.5,HITTER
 Corbin Carroll,0331354e-f6cb-4dba-ba55-7c5c40ab9f5e,HIT,0.5,HITTER
@@ -154,5 +154,14 @@ Luis Rengifo,898ed118-c7ab-4e09-bff4-2a2a7af29053,HIT,0.5,HITTER
 Gabriel Moreno,0331354e-f6cb-4dba-ba55-7c5c40ab9f5e,HIT,0.5,HITTER
 Tim Tawa,0331354e-f6cb-4dba-ba55-7c5c40ab9f5e,HIT,0.5,HITTER
 Adrian Del Castillo,0331354e-f6cb-4dba-ba55-7c5c40ab9f5e,HIT,0.5,HITTER
-Luis Campusano,898ed118-c7ab-4e09-bff4-2a2a7af29053,HIT,0.5,HITTER
 Ryan Waldschmidt,0331354e-f6cb-4dba-ba55-7c5c40ab9f5e,HIT,0.5,HITTER
+Luis Campusano,898ed118-c7ab-4e09-bff4-2a2a7af29053,HIT,0.5,HITTER
+Ryoji Kuribayashi,bed2f637-cb61-4dd9-9925-0cae5934b708,K,4.5,PITCHER
+Naoyuki Uwasawa,21654367-1f95-4062-8b81-15b18a4603f5,K,6.5,PITCHER
+Kazuya Ojima,01c6409b-7b26-433a-b8f6-c044f6b2cf8c,K,5.5,PITCHER
+Kojiro Yoshimura,6cfa6682-79e2-4926-8d11-260ae8a2e1e8,K,5.5,PITCHER
+Hiromi Itoh,89891fda-be96-4052-be4c-6d941f4a895c,K,5.5,PITCHER
+Iori Yamasaki,eba2e2d3-66c2-41f0-8ed4-81493934af52,K,5.5,PITCHER
+Shoki Murakami,bc93b12e-ed12-4942-b782-93c6ea7ba89a,K,5.5,PITCHER
+Kaima Taira,ee473d77-5ca7-4c86-8293-338d2b00707c,K,5.5,PITCHER
+Ono Yudai,5a3db118-79a3-4dbb-bd94-1e06e2da82c7,K,4.5,PITCHER
