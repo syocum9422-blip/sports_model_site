@@ -1,4 +1,17 @@
 team,hitter_name,hitter_id
+Athletics,Alika Williams,675961
+Athletics,Brian Serven,661531
+Athletics,Carlos Cortes,666126
+Athletics,Darell Hernaiz,687231
+Athletics,Donovan Walton,622268
+Athletics,Henry Bolte,703607
+Athletics,Jeff McNeil,643446
+Athletics,Jonah Heim,641680
+Athletics,Lawrence Butler,671732
+Athletics,Max Muncy,691777
+Athletics,Michael Stefanic,683021
+Athletics,Tommy White,695720
+Athletics,Zack Gelof,680869
 Atlanta Braves,Austin Riley,663586
 Atlanta Braves,Brewer Hicklen,676551
 Atlanta Braves,Dominic Smith,642086
@@ -12,6 +25,19 @@ Atlanta Braves,Mike Yastrzemski,573262
 Atlanta Braves,Ozzie Albies,645277
 Atlanta Braves,Ronald Acuña Jr.,660670
 Atlanta Braves,Sean Murphy,669221
+Baltimore Orioles,Blaze Alexander,677942
+Baltimore Orioles,Carlos Narváez,665966
+Baltimore Orioles,Christian Encarnacion-Strand,687952
+Baltimore Orioles,Christian Franklin,681047
+Baltimore Orioles,Coby Mayo,691723
+Baltimore Orioles,Colton Cowser,681297
+Baltimore Orioles,Dylan Beavers,687637
+Baltimore Orioles,Gunnar Henderson,683002
+Baltimore Orioles,Jackson Holliday,702616
+Baltimore Orioles,Leody Taveras,665750
+Baltimore Orioles,Pete Alonso,624413
+Baltimore Orioles,Samuel Basallo,694212
+Baltimore Orioles,Yohel Pozo,650968
 Boston Red Sox,Adley Rutschman,668939
 Boston Red Sox,Andruw Monasterio,655316
 Boston Red Sox,Anthony Seigler,678011
@@ -233,6 +259,19 @@ Philadelphia Phillies,Justin Crawford,702222
 Philadelphia Phillies,Kyle Schwarber,656941
 Philadelphia Phillies,Luis Arraez,650333
 Philadelphia Phillies,Trea Turner,607208
+Pittsburgh Pirates,Billy Cook,695257
+Pittsburgh Pirates,Brandon Lowe,664040
+Pittsburgh Pirates,Bryan Reynolds,668804
+Pittsburgh Pirates,Esmerlyn Valdez,699013
+Pittsburgh Pirates,Henry Davis,680779
+Pittsburgh Pirates,Jacob Gonzalez,694378
+Pittsburgh Pirates,Jake Mangum,663968
+Pittsburgh Pirates,Jared Triolo,669707
+Pittsburgh Pirates,Nick Gonzales,693304
+Pittsburgh Pirates,Nick Yorke,694377
+Pittsburgh Pirates,Oneil Cruz,665833
+Pittsburgh Pirates,Rafael Flores Jr.,804668
+Pittsburgh Pirates,Spencer Horwitz,687462
 San Diego Padres,Austin Hays,669720
 San Diego Padres,Dustin Harris,687957
 San Diego Padres,Fernando Tatis Jr.,665487
@@ -259,6 +298,19 @@ Seattle Mariners,Randy Arozarena,668227
 Seattle Mariners,Taylor Ward,621493
 Seattle Mariners,Victor Robles,645302
 Seattle Mariners,Weston Wilson,642215
+St. Louis Cardinals,Alec Burleson,676475
+St. Louis Cardinals,Bryan Torres,663494
+St. Louis Cardinals,Iván Herrera,671056
+St. Louis Cardinals,JJ Wetherholt,802139
+St. Louis Cardinals,Jimmy Crooks,699625
+St. Louis Cardinals,Jordan Walker,691023
+St. Louis Cardinals,Joshua Báez,695491
+St. Louis Cardinals,José Fermín,665877
+St. Louis Cardinals,Nathan Church,701675
+St. Louis Cardinals,Nolan Gorman,669357
+St. Louis Cardinals,Pedro Pagés,686780
+St. Louis Cardinals,Ramón Urías,602104
+St. Louis Cardinals,Thomas Saggese,695336
 Tampa Bay Rays,Cedric Mullins,656775
 Tampa Bay Rays,Chandler Simpson,802415
 Tampa Bay Rays,Jonathan Aranda,666018
